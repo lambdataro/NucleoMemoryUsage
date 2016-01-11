@@ -9,4 +9,6 @@ Nucleo メモリ使用率表示プログラム。
 - STM32 F7 Discovery (オプション `/F746NG)
 
 ## 使い方
-> NucleoMemoryUsage <ファイル名>.elf
+```
+> NucleoMemoryUsage Nucleo-F401RE.elf
+```
