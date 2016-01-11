@@ -100,7 +100,7 @@ namespace NucleoMemoryUsage
 
             int usedRam = (usage.DataSize + usage.BssSize);
             int maxRam = info.RamSize;
-            Console.WriteLine("RAM\t{0:0.00}%\t({1}B/{2}B)",
+            Console.WriteLine("RAM  \t{0:0.00}%\t({1}B/{2}B)",
                 (double)usedRam / maxRam * 100, usedRam, maxRam);
         }
     }
