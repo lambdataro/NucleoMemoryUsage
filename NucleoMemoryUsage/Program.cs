@@ -93,12 +93,12 @@ namespace NucleoMemoryUsage
         {
             Console.WriteLine("Memory Usage");
 
-            int usedFlash = usage.TextSize;
+            int usedFlash = usage.TextSize + usage.DataSize;
             int maxFlash = info.FlashSize;
             Console.WriteLine("Flash\t{0:0.00}%\t({1}B/{2}B)",
                 (double)usedFlash / maxFlash * 100, usedFlash, maxFlash);
 
-            int usedRam = (usage.DataSize + usage.BssSize);
+            int usedRam = usage.DataSize + usage.BssSize;
             int maxRam = info.RamSize;
             Console.WriteLine("RAM  \t{0:0.00}%\t({1}B/{2}B)",
                 (double)usedRam / maxRam * 100, usedRam, maxRam);
