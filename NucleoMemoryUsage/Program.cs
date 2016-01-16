@@ -91,7 +91,13 @@ namespace NucleoMemoryUsage
 
         static void DisplayMemoryUsage(MemoryInfo info, MemoryUsage usage)
         {
-            Console.WriteLine("Memory Usage");
+            Console.WriteLine("---------------");
+            Console.WriteLine("  Memory Info");
+            Console.WriteLine("---------------");
+
+            Console.WriteLine("Text = {0}B, Data = {1}B, BSS = {2}B, Sum = {3}B",
+                usage.TextSize, usage.DataSize, usage.BssSize,
+                usage.TextSize + usage.DataSize + usage.BssSize);
 
             int usedFlash = usage.TextSize + usage.DataSize;
             int maxFlash = info.FlashSize;
